@@ -13,6 +13,7 @@ import Admin from './components/Admin'
 import Product from './components/Product'
 import Cartpage from './components/Cartpage'
 import Billing from './components/Billing'
+import { Info } from '@mui/icons-material'
 
 function App({store}) {
   
@@ -34,12 +35,13 @@ function App({store}) {
       case "Home":
         if(parseInt(localStorage.getItem("role"))==1 || parseInt(localStorage.getItem("role"))==2)
         {
-           return (<div> <Home /> </div>)
+           return (<div> <Home/> </div>)
+        }
+        else{
+          return (<div><Home/>  </div>)
         }
            
-        else{
-            return(<div><Error></Error></div>)
-        }
+       
            
       case "Admin":
         if(parseInt(localStorage.getItem("role"))==1 )

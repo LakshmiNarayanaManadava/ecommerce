@@ -24,7 +24,7 @@ function Signup() {
         }).then((res)=>{
             alert(res.data)
         })
-    }
+    }   
 
     function Mover(){
         document.getElementById("f1").className="mover-signup";
